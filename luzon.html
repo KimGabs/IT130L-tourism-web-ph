@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <title>Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{background-color:#F5EDDA;}
+            li, h1, h2, h3, p, figcaption {font-family: sans-serif;}
+            li{display: inline;}
+            ul#nav{
+                list-style-type: none;
+                text-align: center;
+                margin-left: -8;
+                margin-right: -8;
+                padding: 0;
+                background-color: #9a7b4f;
+                position: sticky;
+                top: 0;
+                width: auto;
+                z-index: 1
+            }
+            
+            li a, .dropbtn{
+                display:inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+            li a:hover{background-color: #6535;}
+            li.dropdown {display: inline-block;}
+            .dropdown-content {
+                display: none;
+                position:absolute;
+                background-color: #9a7b4f;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a{
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {background-color: #6535;}
+            .dropdown:hover .dropdown-content {display: block;}
+
+            h1{
+                margin-top: 15px; 
+                margin-bottom: -5px;
+                text-align: center; 
+                font-size: 3em; font-weight:900; 
+                color: #4b371c;
+            }
+            h2{text-align: center; font-size: 1.5em; font-weight: lighter;}
+            h3{
+                padding-left: 50px; 
+                font-size: 2em; 
+                font-weight: normal; 
+                color: #4b371c; 
+                margin: 1em 0 -3px;
+            }
+
+            a.names:link {text-decoration:none;}
+            a.names:hover {text-decoration:underline;}
+            
+            p{
+                font-weight: lighter;
+                text-align:justify; 
+                padding-left: 50px;
+                padding-right: 50px;
+                line-height: 1.8;
+                font-size: 1.2em;
+            }
+
+            .container{
+                position: relative; 
+                width: 21.6%; 
+                margin-left: 90px; 
+                display: inline-block;
+                border: 0.5px solid #ccc;
+                border-radius: 10px;
+                }
+
+            img.loc {
+                display: block;
+                object-fit: cover;
+                float: left;
+                width:100%; height:450px;
+                border-radius: 10px;
+            }
+            .overlay{
+                position: absolute;
+                top: 0; bottom: 0; left: 0; right: 0;
+                height: 100%; width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: black;
+                border-radius: 10px;
+            }
+
+            .container:hover .overlay {
+                opacity: 0.65;
+            }
+
+            .text {
+                color: white;
+                font-size: 50px;
+                position: absolute;
+                font-family: serif;
+                top: 50%;
+                left: 50%;
+                opacity: unset;
+                transform: translate(-50%, -50%);
+            }
+
+            img.images{
+                display: inline-block; 
+                object-fit: cover; 
+                width:320; height:320px; 
+                margin: 20px 0 0px 50px;
+                border: 7px solid white;
+            }
+            figcaption{text-align: center; line-height: 2em;}
+            iframe{display: block; margin: 40px auto 20;}
+        </style>
+    </head>
+    <body>
+        <h1>Philippines</h1>
+        <ul id="nav">
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Explore</a>
+                <div class="dropdown-content">
+                    <a href="luzon.html">Luzon</a>
+                    <a href="visayas.html">Visayas</a>
+                    <a href="mindanao.html">Mindanao</a>
+                </div>
+            </li>
+            <li><a href="travelnow.html">Travel Now</a></li>
+        </ul>
+      
+        <h2>Luzon Destinations</h2>
+        <div class="container" style="margin-left: 127px;">
+            <img src="images/luzon/manila.jpg" class = "loc" style="object-position: 50%;" alt="Manila"/>
+            <a href="#manila"><div class="overlay">
+                <div class="text">Manila</div>
+            </div></a>
+        </div>
+        <div class="container">
+            <img src="images/luzon/vigan.jpg" class = "loc" style="object-position: 0em;" alt="Vigan"/>
+            <a href="#vigan"><div class="overlay">
+                <div class="text">Vigan</div>
+            </div></a>
+        </div>
+        <div class="container">
+            <img src="images/luzon/palawan.png" class = "loc" style="object-position: 20%" alt="Palawan"/>
+            <a href="#palawan"><div class="overlay">
+                <div class="text">Palawan</div>
+            </div></a>
+        </div>
+        
+        <hr id="manila" style="border: 20px solid #9a7b4f; width: 98.1%; margin: 50px 0 0 -8px;"> 
+        <h3>Manila</h3>
+        <p>The capital city and seat of government. It’s where historic sites, like Intramuros and Escolta, can be found.
+            For first time visitors, Manila may seem overwhelming to explore. But it's quite manageable once you have a well-planned travel itinerary.
+            You're bound to fall in love with Manila thanks to its interesting tourist spots, foodie destinations, and fun activities.
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ll1ghMpNdBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <h3 style="margin-left: 50px;">Tourist spots in Manila</h3>
+        <img class="images" src="images/luzon/manila/intra-03.jpg" alt="Intramuros" style="object-position: 50%; margin-left: 100px" title="Intramuros">
+        <img class="images" src="images/luzon/manila/rizalpark.jpg" alt="Rizal Park" style="object-position: 50%;" title="Rizal Park">
+        <img class="images" src="images/luzon/manila/museum.jpg" alt="National Muesum" style="object-position: 50%;" title="National Museum of Natural History">
+        <br>
+        <img class="images" src="images/luzon/manila/chinatown-02.jpg" alt="Lucky Chinatown" style="object-position: 0em; margin-left: 100px" title="Chinatown">
+        <img class="images" src="images/luzon/manila/oceanpark.jpg" alt="Ocean park" style="object-position: -6em;" title="Ocean park">
+        <img class="images" src="images/luzon/manila/baywalk.jpg" alt="manila baywalk" style="object-position: -6em;" title="Manila Baywalk">
+        
+        <hr id="vigan" style="border: 20px solid #9a7b4f; width: 98.1%; margin: 50px 0 0 -8px;">
+        <h3>Vigan</h3>
+        <p>
+            One of the oldest towns in the Philippines, Vigan is a Spanish Colonial fairy tale of dark-wood mansions, cobblestone streets and clattering kalesa (horse-drawn carriages). 
+            In fact, it is the finest surviving example of a Spanish Colonial town in Asia and a Unesco World Heritage site.
+            Aside from the magnificent Vigan tourist spots, what makes this city well-loved is its historical and cultural significance that feed not just wanderlust but also a traveler’s mind and soul. 
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h1PdAwbkLVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <h3 style="margin-left: 50px;">Tourist spots in Vigan</h3>
+        <img class="images" src="images/luzon/vigan/kalesa.jpg" alt="Horse riding (Kalesa)" style="object-position: -2em; margin-left: 100px" title="Kalesa">
+        <img class="images" src="images/luzon/vigan/shop-01.jpg" alt="Antique Shop" style="object-position: 0em" title="Antique Shop">
+        <img class="images" src="images/luzon/vigan/museum-01.jpg" alt="Crisologo Museum" style="object-position: -5em" title="Crisologo Museum">
+        <br>
+        <img class="images" src="images/luzon/vigan/calle-01.jpg" alt="Calle Crisologo" style="object-position: -10em; margin-left: 100px" title="Calle Crisologo">
+        <img class="images" src="images/luzon/vigan/salcedo-01.jpg" alt="Plaza Salcedo" style="object-position: 0em 1px" title="Plaza Salcedo">
+        <img class="images" src="images/luzon/vigan/bantay-01.jpg" alt="Bantay Church Bell Tower" style="object-position: 0em" title="Bantay Church Bell Tower">
+
+        <hr id="palawan" style="border: 20px solid #9a7b4f; width: 98.1%; margin: 50px 0 0 -8px;">
+        <h3>Palawan</h3>
+        <p>
+            A long island located just off the western flank of the Philippines and a paradise from end-to-end. Best known for its bright blue waters that contrast against the karst stone cliffs of the island, 
+            this is one of the most popular resort destinations in the Philippines and is only an 80-minute flight from the capital of Manila.
+            Palawan was named <q>Best Island in the World</q> many times already by international travel magazines so it comes as no surprise when tourists across the world notice Palawan’s exquisite beauty.
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mivFr1A7xBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3 style="margin-left: 50px;">Tourist spots in Palawan</h3>
+        <img class="images" src="images/luzon/palawan/Apulit-01.jpg" alt="Resort" style="object-position:30%; margin-left: 100px" title="Palawan Resort">
+        <img class="images" src="images/luzon/palawan/beach.jpg" alt="Beach" style="object-position: 50%" title="Palawan Beach">
+        <img class="images" src="images/luzon/palawan/coron.jpg" alt="Coron" style="object-position: 0em" title="Coron Island"> 
+        <br>
+        <img class="images" src="images/luzon/palawan/elnido-04.jpg" alt="El Nido" style="object-position: 0em 1px; margin-left: 100px" title="El Nido">
+        <img class="images" src="images/luzon/palawan/elnido-02.jpg" alt="El Nido" style="object-position: -5em" title="El Nido Forest"> 
+        <img class="images" src="images/luzon/palawan/puertop-02.jpg" alt="Underground River" style="object-position: -7em 1px" title="Puerto Princessa Underground River">
+
+        <hr style="border: 20px solid #9a7b4f; width: 98.1%; margin: 50px 0 0 -8px;">
+
+    </body>
+</html>

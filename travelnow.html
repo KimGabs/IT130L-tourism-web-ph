@@ -1,0 +1,324 @@
+<html>
+    <head>
+        <title>Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            body{background-color:#F5EDDA;}
+            li, h1, h2, p, label, legend, th {font-family: sans-serif;}
+            li{display: inline;}
+            ul#nav{
+                list-style-type: none;
+                text-align: center;
+                margin-left: -8;
+                margin-right: -8;
+                padding: 0;
+                background-color: #9a7b4f;
+                position: sticky;
+                top: 0;
+                width: auto;
+            }
+            
+            li a, .dropbtn{
+                display:inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+            li a:hover{background-color: #6535;}
+            li.dropdown {display: inline-block;}
+            .dropdown-content {
+                display: none;
+                position:absolute;
+                background-color: #9a7b4f;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a{
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {background-color: #6535;}
+            .dropdown:hover .dropdown-content {display: block;}
+
+            h1{
+                margin-top: 15px; 
+                margin-bottom: -5px;
+                text-align: center; 
+                font-size: 3em; font-weight:900; 
+                color: #4b371c;
+            }
+            h2{color: #4b371c;}
+            legend{
+                background-color: #9a7b4f;
+                color: white;
+                padding: 5.5px 6px;
+                margin-bottom: 7px;
+            }
+            fieldset{
+                    border: 1.4px solid #9a7b4f; 
+                    margin: 20px 20px 0px 20px;
+            }
+            label{font-weight: bold; color:  #4b371c;}
+            input[type="text"], [type="tel"]{
+                padding: 5px;
+                margin: 2.5px 0 28px;    
+                width: 90%;
+                border: 1.1px solid #9a7b4f;
+                border-radius: 4px;
+            }
+            input.bottom[type="text"]{
+                padding: 5px;
+                margin: 2.5px 0 10px;    
+                width: 90%;
+                border: 1.1px solid #9a7b4f;
+                border-radius: 4px;
+            }
+            select{
+                padding: 5px;
+                margin: 2.5px 0 28px;    
+                width: 90%;
+                border: 1.1px solid #9a7b4f;
+                border-radius: 4px;
+                background-color: white;
+            }
+            input[type="date"]{
+                padding: 6px;
+                margin: 2.5px 0 28px;    
+                width: 80%;
+                border: 1.1px solid #9a7b4f;
+                border-radius: 4px;
+                font-family: sans-serif;
+            }
+            input[type="number"]{
+                padding: 6px;
+                margin: 2.5px 0 28px;    
+                width: 80%;
+                border: 1.1px solid #9a7b4f;
+                border-radius: 4px;
+                font-family: sans-serif;
+            }
+            table.covcheck{width: 65%; padding: 10px; font-family: sans-serif; border: 1px solid #9a7b4f; border-collapse: collapse;}
+            table.covcheck td{padding: 10; border: 1.2px solid #9a7b4f;}
+            th{font-weight: normal; text-align: left; padding: 5px;}
+        </style>
+    </head>
+    <body>
+        <h1>Philippines</h1>
+        <p></p>
+        <ul id="nav">
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Explore</a>
+                <div class="dropdown-content">
+                    <a href="luzon.html">Luzon</a>
+                    <a href="visayas.html">Visayas</a>
+                    <a href="mindanao.html">Mindanao</a>
+                </div>
+            </li>
+            <li><a href="travelnow.html">Travel Now</a></li>
+        </ul>
+
+        <h2 style="margin: 0px 20px -5px;">Instructions</h2>
+        <p style="margin: 15px 20px 18px;">Please fill out all the required information. We encourage you to provide true and accurate information.</p>
+        
+        <form action="test.php">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table style="width: 75%;">
+                    <tr>
+                        <td><label for="fname">First name</label></td>
+                        <td><label for="lname">Last name</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="fname" placeholder="Enter First Name" required></td>
+                        <td><input type="text" name="lname" placeholder="Enter Last Name" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><label for="address">Address</label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input style="width: 96.7%;" type="text" name="address" placeholder="Enter Room/Floor/Unit No. Bldg Name, House lot/Block, Street, Subdivision" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City</label></td>
+                        <td><label for="state">State</label></td>
+                        <td><label for="zip">ZIP Code</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Enter City" name="city" required></td>
+                        <td><input type="text" placeholder="Enter State" name="state" required></td>
+                        <td><input type="text" placeholder="Enter ZIP Code" name="zip" pattern="[0-9].{0,}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email Address</label></td>
+                        <td><label for="contact">Contact Number</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="bottom" type="text" name="email" placeholder="xxx@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter an email address" required></td>
+                        <td><input class="bottom" type="text" name="contact" placeholder="XXXX XXX XXXX" pattern="[0-9].{10}" title="Please enter contact number" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+            <legend>Travel Details</legend>
+            <table style="width: 75%;">
+                <tr>
+                    <td style="width: 30%;"><label for="destination">Destination</label></td>
+                    <td style="width: 30%;"><label for="checkin">Check-in Date</label></td>
+                    <td><label for="checkout">Check-out Date</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select style="width: 80%;" name="destination" id="des" required>
+                            <option style="display:none;" disabled selected value></option>
+                            <optgroup label="Luzon">
+                                <option value="Manila">Manila</option>
+                                <option value="Tagaytay">Baguio</option>
+                                <option value="Bicol">Bicol</option>
+                            </optgroup>
+                            <optgroup label="Visayas">
+                                <option value="Cebu">Cebu</option>
+                                <option value="Bohol">Bohol</option>
+                                <option value="Siquijor">Siquijor</option>
+                            </optgroup>
+                            <optgroup label="Mindanao">
+                                <option value="Siargao">Siargao</option>
+                                <option value="South Cotabato">South Cotabato</option>
+                                <option value="Davao">Davao</option>
+                            </optgroup>
+                        </select>
+                        <td><input type="date" name="checkin" min="2021-12-12" required></td>
+                        <td colspan="2"><input style="width: 70%;" type="date" name="checkout" min="2021-12-13" required></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cardType">Credit Card Type</label></td>
+                    <td><label for="cardNo">Credit Card Number</label></td>
+                    <td><label for="cvc">CVC/CVV</label></td>
+                    <td colspan="2"><label for="expDate">Expiration Date</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="cardType" id="cardType" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' required>
+                            <option style="display:none;" disabled selected value></option>
+                            <option value="VISA">VISA</option>
+                            <option value="MetroBank">Metro Bank</option>
+                            <option value="Unionbank">Union Bank</option>
+                            <option value="Eastwest">Eastwest</option>
+                            <option value="Master Card">Master Card</option>
+                            <option value="Citi">Citi</option>
+                            <option value="HSBC">HSBC</option>
+                            <option value="Amex">American Express</option>
+                        </select>
+                    </td>
+                    <td><input type="tel" name="cardNo" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="XXXX XXXX XXXX XXXX" required></td>
+                    <td><input type="tel" name="cvc"  pattern="([0-9].{2})" placeholder="XXX" required></td>
+                    <td style="width: 11%;">
+                        <input style="width: 100%;" type="number" name="monthExpDate" min="1" max="12" placeholder="MM" required>
+                    </td>
+                    <td>
+                        <input style="width: 90%;" type="number" name="dayExpDate" min="1" max="30" placeholder="DD" required>
+                    </td>
+                </tr>
+            </table>
+            </fieldset>
+            <fieldset>
+                <legend>COVID Health Declaration</legend>
+                <table class="covcheck">
+                    <tr>
+                        <td colspan="3"><p style="margin: 5px 0 10px 0;">1. Are you experiencing or did you have any of the following in the last 14 days?</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>a. Fever</p></td>
+                        <td style="width: 15%;"><input type="radio" name="qa" value="Yes" required>Yes</td>
+                        <td style="width: 15%;"><input type="radio" name="qa" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>b. Cough and/or Colds</p></td>
+                        <td><input type="radio" name="qb" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qb" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>c. Body pains</p></td>
+                        <td><input type="radio" name="qc" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qc" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>d. Sore  Throat</p></td>
+                        <td><input type="radio" name="qd" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qd" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>e. Fatigue/Tiredness</p></td>
+                        <td><input type="radio" name="qe" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qe" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>f. Headache</p></td>
+                        <td><input type="radio" name="qf" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qf" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>g. Diarrhea</p></td>
+                        <td><input type="radio" name="qg" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qg" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>h. Loss of taste or smell</p></td>
+                        <td><input type="radio" name="qh" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qh" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p>i. Difficulty of breathing</p></td>
+                        <td><input type="radio" name="qi" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="qi" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p style="line-height: 1.4em;">
+                                2. Have you had face-to-face contact with a probable or confirmed COVID-19 case within
+                                1 meter and for more than 15 minutes for the past 14 days? 
+                        </p></td>
+                        <td><input type="radio" name="q2" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="q2" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p style="line-height: 1.4em;">
+                                3. Have you provided direct care for a patient with probable or confirmed COVID-19 case
+                                without using proper "Personal Protective Equipment (PPE)" for the past 14 days?
+                            </p></td>
+                        <td><input type="radio" name="q3" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="q3" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p style="line-height: 1.4em;">
+                            4. Have you traveled outside the Philippines in the last 14 days?
+                        </p></td>
+                        <td><input type="radio" name="q4" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="q4" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p style="line-height: 1.4em;">
+                            Have you traveled outside the current city/municipality where you reside? 
+                        </p></td>
+                        <td><input type="radio" name="q5" value="Yes" required>Yes</td>
+                        <td><input type="radio" name="q5" value="No">No</td>
+                    </tr>
+                    <tr>
+                        <td><p> If yes, specify which city/municipality you went to</p></td>
+                        <td colspan="2"><input style="margin: 1px 0px 0 10px;" type="text" name="qCity"></td>
+                    </tr>
+                </table>                
+            </fieldset>
+            <br><input type="reset" style="margin-left: 45%; padding: 4.5px; font-weight: bold;">
+                <input style="margin-left: 10px; margin-bottom: 7px; padding: 4.5px; font-weight: bold;" type="submit">
+        </form>
+    </body>
+</html>
